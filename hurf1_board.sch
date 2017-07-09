@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -7560,8 +7560,8 @@ Based on the following sources:
 <pinref part="IC1" gate="POWER" pin="VSS_2"/>
 <wire x1="76.2" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <junction x="73.66" y="63.5"/>
-<wire x1="73.66" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
-<label x="71.12" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="73.66" y1="63.5" x2="72.644" y2="63.5" width="0.1524" layer="91"/>
+<label x="72.644" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="3.3V_REG" gate="A" pin="GND"/>
@@ -7763,7 +7763,7 @@ Based on the following sources:
 <label x="66.04" y="139.7" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="SPI1_SS" class="0">
+<net name="SPI1_NSS" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA4"/>
 <wire x1="5.08" y1="78.74" x2="2.54" y2="78.74" width="0.1524" layer="91"/>
@@ -7883,7 +7883,7 @@ Based on the following sources:
 <wire x1="33.02" y1="25.4" x2="20.32" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="USB_N" class="0">
+<net name="USB_DM" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_H" pin="PA11"/>
 <wire x1="5.08" y1="55.88" x2="-10.16" y2="55.88" width="0.1524" layer="91"/>
@@ -7893,22 +7893,6 @@ Based on the following sources:
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="30.48" x2="-5.08" y2="30.48" width="0.1524" layer="91"/>
 <label x="-5.08" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="USB_P" class="0">
-<segment>
-<pinref part="IC1" gate="PORTA_H" pin="PA12"/>
-<wire x1="5.08" y1="53.34" x2="2.54" y2="53.34" width="0.1524" layer="91"/>
-<label x="2.54" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<label x="-5.08" y="25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="10.16" y1="25.4" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="2.54" y1="25.4" x2="-5.08" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="17.78" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
-<junction x="2.54" y="25.4"/>
 </segment>
 </net>
 <net name="BOOT" class="0">
@@ -7942,6 +7926,12 @@ Based on the following sources:
 <wire x1="-2.54" y1="114.3" x2="-2.54" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="111.76" x2="-5.08" y2="111.76" width="0.1524" layer="91"/>
 <label x="-5.08" y="111.76" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTA_L" pin="PA3"/>
+<wire x1="5.08" y1="81.28" x2="2.54" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="83.82" x2="2.032" y2="83.82" width="0.1524" layer="91"/>
+<label x="2.032" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="VDDIO" class="0">
@@ -7991,12 +7981,22 @@ Based on the following sources:
 <wire x1="106.68" y1="124.46" x2="109.22" y2="124.46" width="0.1524" layer="91"/>
 <label x="109.22" y="124.46" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="PORTB_H" pin="PB9"/>
+<wire x1="38.1" y1="60.96" x2="51.562" y2="60.96" width="0.1524" layer="91"/>
+<label x="51.562" y="60.96" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="RC_IN2" class="0">
 <segment>
 <pinref part="SV1" gate="1" pin="4"/>
 <wire x1="96.52" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 <label x="109.22" y="129.54" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_H" pin="PB8"/>
+<wire x1="38.1" y1="63.5" x2="40.64" y2="63.5" width="0.1524" layer="91"/>
+<label x="40.64" y="63.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RC_IN3" class="0">
@@ -8007,6 +8007,11 @@ Based on the following sources:
 <wire x1="106.68" y1="134.62" x2="109.22" y2="134.62" width="0.1524" layer="91"/>
 <label x="109.22" y="134.62" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB7"/>
+<wire x1="38.1" y1="71.12" x2="53.34" y2="71.12" width="0.1524" layer="91"/>
+<label x="53.34" y="71.12" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="RC_IN4" class="0">
 <segment>
@@ -8015,6 +8020,11 @@ Based on the following sources:
 <wire x1="104.14" y1="134.62" x2="104.14" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="139.7" x2="109.22" y2="139.7" width="0.1524" layer="91"/>
 <label x="109.22" y="139.7" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB6"/>
+<wire x1="38.1" y1="73.66" x2="40.64" y2="73.66" width="0.1524" layer="91"/>
+<label x="40.64" y="73.66" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RC_IN5" class="0">
@@ -8025,6 +8035,11 @@ Based on the following sources:
 <wire x1="101.6" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
 <label x="109.22" y="144.78" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB3"/>
+<wire x1="38.1" y1="81.28" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
+<label x="40.64" y="81.28" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="RC_IN6" class="0">
 <segment>
@@ -8034,12 +8049,22 @@ Based on the following sources:
 <wire x1="99.06" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
 <label x="109.22" y="149.86" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="PORTA_H" pin="PA15"/>
+<wire x1="5.08" y1="45.72" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
+<label x="-10.16" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="ESC1" class="0">
 <segment>
 <pinref part="ESC1" gate="G$1" pin="3"/>
 <wire x1="-43.18" y1="93.98" x2="-30.48" y2="93.98" width="0.1524" layer="91"/>
 <label x="-30.48" y="93.98" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB0"/>
+<wire x1="38.1" y1="88.9" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
+<label x="40.64" y="88.9" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESC2" class="0">
@@ -8048,6 +8073,11 @@ Based on the following sources:
 <wire x1="-50.8" y1="81.28" x2="-30.48" y2="81.28" width="0.1524" layer="91"/>
 <label x="-30.48" y="81.28" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB1"/>
+<wire x1="38.1" y1="86.36" x2="50.8" y2="86.36" width="0.1524" layer="91"/>
+<label x="50.8" y="86.36" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="ESC3" class="0">
 <segment>
@@ -8055,12 +8085,22 @@ Based on the following sources:
 <wire x1="-43.18" y1="63.5" x2="-30.48" y2="63.5" width="0.1524" layer="91"/>
 <label x="-30.48" y="63.5" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="PORTB_H" pin="PB10"/>
+<wire x1="38.1" y1="58.42" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
+<label x="40.64" y="58.42" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="ESC4" class="0">
 <segment>
 <pinref part="ESC4" gate="G$1" pin="3"/>
 <wire x1="-50.8" y1="50.8" x2="-30.48" y2="50.8" width="0.1524" layer="91"/>
 <label x="-30.48" y="50.8" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_H" pin="PB11"/>
+<wire x1="38.1" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
+<label x="50.8" y="55.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -8073,6 +8113,22 @@ Based on the following sources:
 <junction x="111.76" y="20.32"/>
 <pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="111.76" y1="20.32" x2="116.84" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="USB_DP" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<label x="-5.08" y="25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="10.16" y1="25.4" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="2.54" y1="25.4" x2="-5.08" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="17.78" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
+<junction x="2.54" y="25.4"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTA_H" pin="PA12"/>
+<wire x1="5.08" y1="53.34" x2="2.54" y2="53.34" width="0.1524" layer="91"/>
+<label x="2.54" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
