@@ -1,0 +1,3 @@
+BOARD MUST BE UPDATED 
+-Top and Bottom GND planes must be connected 
+-On Bottom , GND plane inside the power lanes must be connected to other GND planes
