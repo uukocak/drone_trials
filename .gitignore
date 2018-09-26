@@ -1,5 +1,10 @@
+#Eagle Ignore 
 *.b#*
 *.s#*
 *.l#*
 *.epf
 *.scr
+
+#Other
+*.ini
+*.workspace
