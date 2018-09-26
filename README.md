@@ -15,5 +15,5 @@ Openpilot inspired personal drone project. It is a hobby project with no future 
   - Pending...
 
 Check the orginal OpenPilot project at  :
-https://github.com/librepilot
-https://opwiki.readthedocs.io/en/latest/index.html
+- https://github.com/librepilot
+- https://opwiki.readthedocs.io/en/latest/index.html
