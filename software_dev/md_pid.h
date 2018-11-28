@@ -3,7 +3,7 @@
  *
  *	@author 	Umut Utku Kocak
  *	@email		umutkocak@hacettepe.edu.tr
- *  @company    Merophy Dynamics
+ *      @company    
  *	@version 	v1.0
  *	@ide		Keil uVision
  *
